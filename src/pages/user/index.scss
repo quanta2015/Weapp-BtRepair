@@ -1,0 +1,98 @@
+@import "../../common.scss";
+
+
+
+
+.g-user {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:#F8F9FF;
+
+  .m-hd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#fff;
+    padding: 20rpx 32rpx;
+    height: 90rpx;
+    min-height: 90rpx;
+    box-sizing: border-box;
+
+    &>.m-tl {
+      flex: 1;
+      text-align: center;
+    }
+
+    .m-icon-user {
+      background: #508CFF;
+      padding: 10rpx;
+      border-radius: 30rpx;
+    }
+
+    .m-return {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  }
+
+  .m-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200rpx;
+    background:#fff;
+    padding: 40rpx 52rpx;
+    box-sizing: border-box;
+    margin-bottom: 27rpx;
+
+    &>Image {
+      height: 120rpx;
+      width: 120rpx;
+    }
+
+    &>text {
+      margin-left: 32rpx;
+      flex: 1;
+    }
+  }
+
+  .m-sect {
+    display: flex;
+    flex-direction: column;
+
+    &+.m-sect {
+      margin-top: 27rpx;
+    }
+
+    .m-row {
+      display: flex;
+      justify-content: center;
+      background:#fff;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 32rpx;
+      height: 100rpx;
+
+      &+.m-row {
+        margin-top: 2rpx;
+      }
+
+      text {
+        flex: 1;
+      }
+
+      image {
+        padding: 10rpx 20rpx;
+      }
+
+    }
+
+    
+  }
+
+  
+}

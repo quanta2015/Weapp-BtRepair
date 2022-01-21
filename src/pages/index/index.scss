@@ -1,0 +1,191 @@
+@import "../../common.scss";
+
+
+.g-index {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32rpx 40rpx;
+  background:#F8F9FF;
+
+
+  &>.m-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60rpx;
+
+    
+    
+    image {
+      width: 184rpx;
+      height: 184rpx;
+      padding: 45rpx;
+      box-sizing: border-box;
+      background:#eee;
+      border-radius: 92rpx;
+      margin-bottom: 20rpx;
+      border: 4rpx solid #eee;
+    }
+    
+
+    &.sel {
+      image {
+        border: 4rpx solid $MAIN_COLOR;
+      }
+      text {
+        font-weight: bold;
+        color: $MAIN_COLOR;
+      }
+    }
+
+    text {
+      font-size: 28rpx;
+      color: #666;
+    }
+  }
+
+  .m-sp {
+    flex: 1;
+    width: 100%;
+  }
+
+  .m-login {
+    position: absolute;
+    display: flex;
+    z-index: 99;
+    top: 0;
+    bottom:0;
+    width: 100%;
+    background: rgba(0,0,0,.3);
+    justify-content: center;
+    align-items: center;
+
+    .m-wrap {
+      height: 420rpx;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      padding: 40rpx;
+      box-sizing: border-box;
+      cursor: grabbing;
+
+      .m-title {
+        font-size: 32rpx;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 30rpx;
+      }
+
+      .m-info {
+        display: flex;
+        font-size: 26rpx;
+        color: #999;
+        justify-content: center;
+        align-items: center;
+
+
+
+        text {
+          color: #0c3ba0;
+        }
+      }
+
+      .m-btn {
+        display: flex;
+        height: 90rpx;
+        background: #ddd;
+        justify-content: center;
+        align-items: center;
+        color: #999;
+        border-radius: 46rpx;
+        margin-top: 30rpx;
+        width: 100%;
+
+        &.sel {
+          background: #0c3ba0;
+          color: #fff;
+        }
+      }
+
+      .m-cancel {
+        display: flex;
+        font-size: 24rpx;
+        align-items: center;
+        margin-top: 20rpx;
+        justify-content: center;
+        color: #999;
+      }
+    }
+  }
+
+
+  .g-info {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    background:#fff;
+    padding: 20rpx 40rpx;
+    box-sizing: border-box;
+    overflow: scroll;
+
+    .m-wrap {
+      display: flex;
+      flex-direction: column;
+
+      .m-tl {
+        font-size: 32rpx;
+        color: #333;
+        text-align: center;
+        margin-bottom: 40rpx;
+      }
+
+      .m-p {
+        font-size: 24rpx;
+        color: #888;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: justify;
+        margin: 0 0 8rpx;
+        line-height: 1.6;
+      }
+
+      .m-e {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .m-blk {
+        flex: 1;
+      }
+
+      .m-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:$MAIN_COLOR;
+        color: #fff;
+        padding: 20rpx;
+        margin: 0 0 20rpx;
+        border-radius: 10rpx;
+        width: 100%;
+        align-self: center;
+      }
+    }
+  }
+
+
+
+
+
+
+
+}

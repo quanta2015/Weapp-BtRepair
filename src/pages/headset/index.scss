@@ -1,0 +1,224 @@
+@import "../../common.scss";
+
+.g-headset {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:#F8F9FF;
+
+  .m-ret {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 32rpx;
+
+
+    &>.m-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      &>.m-none {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30vw;
+    
+
+        &>text {
+          font-size: 24rpx;
+          color: #999;
+        }
+
+        &>image {
+          width: 250rpx;
+          height: 200rpx;
+        }
+      }
+
+      &>.m-bind {
+        background:$MAIN_COLOR;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10rpx;
+        height: 60rpx;
+        width: 300rpx;
+        margin-top: 100rpx;
+        color: #fff;
+        font-size: 28rpx;
+      }
+    }
+
+    &>.m-hs {
+      position: relative;
+      background: url(https://ans-hz.cn/static/info.png);
+      background-size: 100% 100%;
+      width: 100%;
+      height: 280rpx;
+      border-radius: 20rpx;
+      display: flex;
+      flex-direction: column;
+      padding: 32rpx 32rpx 32rpx 120rpx;
+      box-sizing: border-box;
+      color: #fff;
+
+      image {
+        position: absolute;
+        left: 32rpx;
+        background: #fff;
+        padding: 10rpx;
+        border-radius: 40rpx;
+        top: 32rpx;
+      }
+
+      .m-cnt {
+        display: flex;
+        word-wrap: break-word;
+        white-space: normal;
+        word-break: break-all;
+      }
+
+      .m-tl {
+        font-size: 32rpx;
+        height: 60rpx;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20rpx;
+      }
+    }
+
+    
+  }
+
+  .g-bind {
+    margin: 32rpx 0 0 0;
+
+    .m-row-c {
+      flex-direction: column;
+
+      &>.m-tl:after {
+        content: ''
+      }
+
+      textarea {
+        padding: 20rpx;
+        margin-top: 20rpx;
+        border-radius: 10rpx;
+        width: 100%;
+        height: 240rpx;
+      }
+    }
+
+    .m-help {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+      padding: 32rpx;
+
+      .m-wrap {
+        display: flex;
+        color: $MAIN_COLOR;
+        font-size: 24rpx;
+        padding: 20rpx 32rpx;
+        background: #fff;
+        border-radius: 28rpx;
+        height: 56rpx;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .m-hd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#fff;
+    padding: 20rpx 32rpx;
+    height: 90rpx;
+    min-height: 90rpx;
+    box-sizing: border-box;
+
+    &>.m-tl {
+      flex: 1;
+      text-align: center;
+    }
+
+    .m-icon-user {
+      background: #508CFF;
+      padding: 10rpx;
+      border-radius: 30rpx;
+    }
+
+    .m-return {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  }
+
+  .m-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200rpx;
+    background:#fff;
+    padding: 40rpx 52rpx;
+    box-sizing: border-box;
+    margin-bottom: 27rpx;
+
+    &>Image {
+      height: 120rpx;
+      width: 120rpx;
+    }
+
+    &>text {
+      margin-left: 32rpx;
+      flex: 1;
+    }
+  }
+
+  .m-sect {
+    display: flex;
+    flex-direction: column;
+
+    &+.m-sect {
+      margin-top: 27rpx;
+    }
+
+    .m-row {
+      display: flex;
+      justify-content: center;
+      background:#fff;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 32rpx;
+      height: 100rpx;
+
+      &+.m-row {
+        margin-top: 2rpx;
+      }
+
+      text {
+        flex: 1;
+      }
+
+      image {
+        padding: 10rpx 20rpx;
+      }
+
+    }
+
+    
+  }
+
+  
+}

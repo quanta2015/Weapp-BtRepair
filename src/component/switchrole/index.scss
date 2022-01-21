@@ -1,0 +1,56 @@
+@import "../../common.scss";
+
+
+
+
+.g-switch {
+  position: fixed;
+  width: 100vw;
+  top: 90rpx;
+  bottom:0;
+  z-index: 100;
+  background: rgba(0,0,0,.4);
+  overflow: scroll;
+
+  .m-warp {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40rpx;
+    background:#fff;
+
+    &>.m-title {
+      padding: 20rpx 0;
+    }
+
+    &>.m-item {
+      display: flex;
+      padding: 20rpx;
+
+      &+.m-item {
+        border-top: 1px solid #eee;
+      }
+
+      .m-lt {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        &>.m-name {
+          font-size: 32rpx;
+        }
+        &>.m-id {
+          font-size: 24rpx;
+          color: #999;
+          margin-top: 20rpx;
+        }
+      }
+
+      .m-rt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+  }
+}

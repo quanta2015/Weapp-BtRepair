@@ -1,0 +1,229 @@
+@import "~taro-ui/dist/style/components/message.scss";
+@import "~taro-ui/dist/style/components/modal.scss";
+@import "~taro-ui/dist/style/components/activity-indicator.scss";
+@import '~taro-ui/dist/style/components/loading.scss';
+
+@import "common.scss";
+
+
+
+
+
+.g-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  height: 100vh;
+  z-index: 100;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+
+  .m-logo {
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    background: transparent!important;
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 32rpx;
+  }
+
+  .m-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:#fff;
+
+    .m-load {
+      display: flex;
+      width: 256rpx;
+      height: 256rpx;
+      box-sizing: border-box;
+      background:#fff;
+    }
+
+    
+  }
+  
+
+  text {
+    font-size: 24rpx;
+    color: #666;
+    margin-top: 200rpx;
+    position: absolute;
+  }
+
+  image {
+    width: 64Px;
+    height: 64Px;
+    background: rgba(150,150,150,.8);
+    padding: 10rpx;
+    border-radius: 20rpx;
+  }
+}
+
+
+.g-loading-init {
+  background: #fff;
+  &>image {
+    background: #fff;
+  }
+}
+
+
+.g-bind {
+    display: flex;
+    flex-direction: column;
+    margin: 20rpx -32rpx 0 -32rpx;
+    flex: 1;
+
+    .m-row {
+      display: flex;
+      padding: 32rpx;
+      font-size: 32rpx;
+      background: #fff;
+
+      &+.m-row {
+        border-top: 1px solid #eee;
+      }
+
+      &:nth-child(4) {
+        flex: 1;
+        background:transparent;
+      }
+
+      .m-tl {
+        display: flex;
+        flex: 1;
+        color: #333;
+        &:after {
+          content: "*";
+          margin-left: 20rpx;
+          color: #dd0000;
+        }
+      }
+
+      .m-form {
+        display: flex;
+
+        .f-icon {
+          padding: 0 0 0 30rpx;
+        }
+
+        input {
+          text-align: right;
+        }
+      }
+    }
+
+    .m-fun {
+      display: flex;
+      background:#fff;
+      padding: 32rpx;
+      border-top: 1px solid #eee;
+
+      .m-btn {
+        display: flex;
+        background: $MAIN_COLOR;
+        height: 72rpx;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        border-radius: 10rpx;
+        box-sizing: border-box;
+
+        &:first-child {
+          background:#fff;
+          border: 2rpx solid $MAIN_COLOR;
+          color: $MAIN_COLOR;
+        }
+
+        &+.m-btn {
+          margin-left: 20rpx;
+        }
+      }
+    }
+  }
+
+.g-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  z-index: 100;
+  background: rgba(0,0,0,.3);
+  visibility: hidden;
+
+  &.act {
+    visibility: visible;
+  }
+
+  &>.m-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 70%;
+    height: 300rpx;
+    background: #fff;
+
+    .m-title {
+      height: 100rpx;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32rpx;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .m-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24rpx;
+      color: #666;
+      padding: 20rpx 30rpx;
+      line-height: 1.6;
+    }
+
+    &>.m-fun {
+      display: flex;
+      width: 100%;
+
+      .m-btn {
+        width: 100%;
+        height: 80rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid #eee;
+        color: $MAIN_COLOR;
+        background:#fff;
+        border-radius: 0;
+        font-size: 32rpx;
+
+        &:after {
+          border: none;
+        }
+
+        &+.m-btn {
+          border-left: 1px solid #eee
+        }
+      }
+    }
+  }
+}
