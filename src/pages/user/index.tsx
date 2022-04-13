@@ -51,12 +51,6 @@ class User extends Component {
         </View>
 
         <View className="m-sect">
-          <View className="m-row">
-            <Image className="f-icon" src={icon_child}> </Image>
-            <Text>小助理</Text>
-            <Image className="f-icon" src={icon_go} > </Image>
-          </View>
-
 
           <View className="m-row" onClick={this.doGotoHeadset}>
             <Image className="f-icon" src={icon_headset}> </Image>

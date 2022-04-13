@@ -5,16 +5,18 @@ import req from '../utils/request'
 import * as urls from '../constant/apis'
 
 
-const appid     = 'wx6f28827eb42ae4e7'
 
-// const APP_SERVER         = 'https://gateway.community-sit.easyj.top/'
-// const API_SERVER         = 'https://gateway.community-sit.easyj.top/user-center/'
-
-const APP_SERVER         = 'https://gateway.suosihulian.com/'
-const API_SERVER         = 'https://gateway.suosihulian.com/user-center/'
+// const APP_SERVER         = 'https://gateway.suosihulian.com/'
+// const API_SERVER         = 'https://gateway.suosihulian.com/user-center/'
 
 
-const URL_PARAMS         = 'auth/oauth/token?client_id=prod&client_secret=prod&grant_type=password&from=wx_app&'
+const appid     = 'wxf5ea384a057ce816'
+
+const APP_SERVER         = 'https://gateway.community-dev.easyj.top'
+const API_SERVER         = APP_SERVER + '/user-center/'
+
+
+const URL_PARAMS         = '/auth/oauth/token?client_id=dev&client_secret=dev&grant_type=password&from=wx_app&'
 const URL_LOAD_USER_ADDR = API_SERVER + '/mobile/assets/personal/assetsDetail'
 const URL_ADDR_UPDATE    = API_SERVER + '/mobile/assets/personal/updateOne'
 const URL_ADDR_BIND      = API_SERVER + '/mobile/assets/personal/saveOne'
@@ -27,10 +29,12 @@ const URL_LIST_CLS       = API_SERVER + '/mobile/assets/outsider/resource/search
 const URL_LIST_EQU       = API_SERVER + '/mobile/assets/outsider/getEquipmentList'
 const URL_EQU_BIND       = API_SERVER + '/mobile/assets/outsider/saveEquipment'
 const URL_EQU_UPDATE     = API_SERVER + '/mobile/assets/outsider/updateEquipment'
+const URL_EQU_TYPE_LIST  = API_SERVER + '/mobile/assets/outsider/getEquipmentTypeList'
 
 
-const URL_GET_PHONE      = `${APP_SERVER}external-service/feign/wechat/mini/user/phoneNumber`
-const URL_SWITCH_USER    = APP_SERVER + 'user-center/switch/school'
+const URL_GET_PHONE      = `${APP_SERVER}/external-service/feign/wechat/mini/user/phoneNumber`
+const URL_SWITCH_USER    = APP_SERVER + '/user-center/switch/school'
+
 
 
 
@@ -223,6 +227,15 @@ class mainStore {
     let r = await req.post(URL_EQU_UPDATE,params,this.token)
     return checkP(r,206)
   }
+
+  // 设备类型
+  equTypeList = async (params) =>{
+    let r = await req.get(URL_EQU_TYPE_LIST,params,this.token)
+    return check(r,207)
+  }
+
+
+  
 
 
 

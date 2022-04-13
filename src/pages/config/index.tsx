@@ -681,8 +681,11 @@ class Config extends Component {
 
   render () {
 
-    const { userName,status,showInfo,retList,clsList,equList,hisList,showSwitch,showConn,e_name,e_code,e_type,selOrgName,selClsName } = this.state
+    var { userName,status,showInfo,retList,clsList,equList,hisList,showSwitch,showConn,e_name,e_code,e_type,selOrgName,selClsName } = this.state
     const focus = (this.state.finishSearch)?false:true
+
+
+    hisList=[{name:'杭州师傅大学'}]
 
     let addr 
     switch(status) {
@@ -696,6 +699,7 @@ class Config extends Component {
     console.log('retList',retList)
     console.log('pageNoS',this.state.pageNoS)
     console.log('pageNoR',this.state.pageNoR)
+
 
 
     return (

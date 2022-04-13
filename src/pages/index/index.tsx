@@ -80,7 +80,8 @@ class Index extends Component {
       this.store.savePhone(mobile)
       this.router(mobile)
     }else{
-      Taro.atMessage({ 'message':'系统中没有你的账号！', 'type':'error' })
+      Taro.showToast({ title: '您的账号不存在', icon: 'none', duration: 2000 })
+      // Taro.atMessage({ 'message':'系统中没有你的账号！', 'type':'error' })
     }
   }
 
